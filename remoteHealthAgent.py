@@ -67,6 +67,7 @@ class RemoteHealthAgent:
             'vomiting': ['Food poisoning', 'Gastroenteritis', 'COVID-19'],
             'diarrhea': ['Food poisoning', 'Gastroenteritis', 'COVID-19'],
             'muscle pain': ['Flu', 'Fibromyalgia', 'COVID-19'],
+            'chills': ['Flu', 'Malaria', 'COVID-19'],  
         }
 
     def analyze_symptoms(self, patient_id):
@@ -87,9 +88,29 @@ class RemoteHealthAgent:
 
         if detected_diseases:
             most_likely_disease = detected_diseases[0]  # Assuming the first detected disease is the most likely
-            return f"Location: {location}\nDetected diseases: {', '.join(detected_diseases)}.\nMost likely disease: {most_likely_disease}.\nProbability: {probability:.2f}\nSymptoms: {', '.join(patient_symptoms)}"
+            
+            # Calculate disease severity based on the number of matching symptoms
+            severity = self.calculate_severity(detected_diseases, patient_symptoms)
+
+            return f"Location: {location}\nDetected diseases: {', '.join(detected_diseases)}.\nMost likely disease: {most_likely_disease}.\nProbability: {probability:.2f}\nSymptoms: {', '.join(patient_symptoms)}\nSeverity: {severity}"
         else:
             return f"Location: {location}\nNo specific disease detected."
+        
+    def calculate_severity(self, detected_diseases, patient_symptoms):
+        """
+        Calculate the severity of the disease based on the number of matching symptoms.
+        """
+        max_match_count = 0
+        for disease in detected_diseases:
+            match_count = sum(symptom in patient_symptoms for symptom in self.disease_graph.get(disease, []))
+            max_match_count = max(max_match_count, match_count)
+
+        if max_match_count >= 3:
+            return "Severe"
+        elif max_match_count >= 1:
+            return "Affected"
+        else:
+            return "Normal"
 
     def detect_disease_with_ml(self, symptoms):
         """
