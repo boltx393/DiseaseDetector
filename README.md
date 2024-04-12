@@ -22,6 +22,7 @@ python remote_health_agent.py
 ## Files
 
 - `remote_health_agent.py`: Main Python script containing the RemoteHealthAgent class implementation.
+- `generator_csv.py`: Python script to generate sample CSV files containing patient symptom data.
 - `patient_data.csv`: Sample CSV file containing patient symptom data.
 
 ## Requirements
