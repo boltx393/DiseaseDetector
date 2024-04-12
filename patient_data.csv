@@ -1,0 +1,300 @@
+patient_id,symptoms,location
+P001,"muscle pain,shortness of breath,fever,cough,fatigue,nausea,headache",Remote Location 4
+P002,"headache,muscle pain",Remote Location 8
+P003,shortness of breath,Remote Location 10
+P004,"fatigue,headache,shortness of breath,fever",Remote Location 9
+P005,"fatigue,fever,headache,muscle pain,nausea,cough",Remote Location 9
+P006,"muscle pain,headache,shortness of breath",Remote Location 1
+P007,cough,Remote Location 8
+P008,fever,Remote Location 10
+P009,fatigue,Remote Location 9
+P010,"fever,nausea",Remote Location 3
+P011,"fever,headache,cough,fatigue,muscle pain",Remote Location 3
+P012,"cough,nausea,shortness of breath,fatigue,muscle pain",Remote Location 4
+P013,"fatigue,fever,muscle pain",Remote Location 5
+P014,"fatigue,nausea,headache,fever,muscle pain,cough",Remote Location 8
+P015,"cough,fatigue,shortness of breath,nausea,headache,fever",Remote Location 8
+P016,"fever,muscle pain,headache",Remote Location 1
+P017,"headache,fever,cough,muscle pain,shortness of breath,fatigue,nausea",Remote Location 9
+P018,"cough,muscle pain,nausea,fatigue,headache,fever,shortness of breath",Remote Location 8
+P019,fever,Remote Location 7
+P020,nausea,Remote Location 10
+P021,"fever,nausea,shortness of breath",Remote Location 4
+P022,"shortness of breath,headache,cough,nausea,muscle pain",Remote Location 9
+P023,"shortness of breath,muscle pain",Remote Location 1
+P024,"fever,headache,fatigue",Remote Location 8
+P025,fever,Remote Location 2
+P026,"nausea,fatigue,fever,headache,shortness of breath,muscle pain",Remote Location 7
+P027,"fatigue,headache,muscle pain,shortness of breath",Remote Location 10
+P028,muscle pain,Remote Location 2
+P029,"cough,shortness of breath,nausea,muscle pain,fever,headache",Remote Location 2
+P030,"headache,fatigue,muscle pain,nausea,cough,fever",Remote Location 4
+P031,"fever,headache,nausea,cough,muscle pain,shortness of breath,fatigue",Remote Location 2
+P032,"cough,fever,fatigue",Remote Location 1
+P033,"fever,headache,cough",Remote Location 4
+P034,"headache,nausea,cough,fatigue,fever,shortness of breath,muscle pain",Remote Location 10
+P035,headache,Remote Location 5
+P036,"cough,muscle pain,shortness of breath",Remote Location 8
+P037,"fatigue,cough,fever,shortness of breath",Remote Location 10
+P038,"fatigue,muscle pain,shortness of breath,headache,fever,cough",Remote Location 9
+P039,"shortness of breath,nausea,muscle pain",Remote Location 9
+P040,"cough,nausea",Remote Location 5
+P041,"muscle pain,shortness of breath,nausea,cough,fever",Remote Location 8
+P042,"fever,nausea,headache,cough,shortness of breath,muscle pain,fatigue",Remote Location 2
+P043,"shortness of breath,muscle pain,nausea,cough,fever,fatigue,headache",Remote Location 10
+P044,muscle pain,Remote Location 1
+P045,"fatigue,muscle pain,nausea",Remote Location 8
+P046,"fever,fatigue,nausea,muscle pain,shortness of breath,cough,headache",Remote Location 10
+P047,"cough,muscle pain",Remote Location 8
+P048,"nausea,fatigue,fever,shortness of breath,headache,cough",Remote Location 4
+P049,"shortness of breath,fever,muscle pain",Remote Location 10
+P050,"nausea,cough,fatigue,headache,fever,shortness of breath,muscle pain",Remote Location 1
+P051,"fever,fatigue,cough,muscle pain,shortness of breath,headache,nausea",Remote Location 8
+P052,"muscle pain,headache,fatigue,nausea,fever,cough",Remote Location 9
+P053,"muscle pain,headache,nausea,fever,shortness of breath,cough,fatigue",Remote Location 6
+P054,"fever,nausea,fatigue,muscle pain",Remote Location 6
+P055,"fatigue,headache,shortness of breath,cough,fever",Remote Location 2
+P056,"cough,headache,muscle pain,fatigue",Remote Location 10
+P057,"fever,fatigue",Remote Location 8
+P058,"headache,fever,nausea,fatigue",Remote Location 6
+P059,muscle pain,Remote Location 4
+P060,shortness of breath,Remote Location 9
+P061,muscle pain,Remote Location 8
+P062,"fatigue,muscle pain,nausea,headache,shortness of breath,cough,fever",Remote Location 10
+P063,"nausea,cough",Remote Location 1
+P064,"fever,muscle pain,cough",Remote Location 10
+P065,"shortness of breath,fatigue,nausea,fever,headache,muscle pain,cough",Remote Location 6
+P066,"fatigue,muscle pain",Remote Location 5
+P067,"cough,fever",Remote Location 9
+P068,"fatigue,muscle pain,shortness of breath,fever",Remote Location 3
+P069,"muscle pain,fatigue,nausea,headache,cough,shortness of breath,fever",Remote Location 9
+P070,"cough,nausea,fever,fatigue,headache,muscle pain",Remote Location 9
+P071,"fatigue,fever,nausea,muscle pain,headache,cough",Remote Location 9
+P072,"muscle pain,headache,shortness of breath,fever,nausea",Remote Location 9
+P073,"cough,shortness of breath,fatigue,muscle pain,fever",Remote Location 5
+P074,"nausea,cough,headache,fever,muscle pain,shortness of breath,fatigue",Remote Location 10
+P075,"cough,fatigue,nausea,fever,headache,shortness of breath",Remote Location 6
+P076,"cough,headache,shortness of breath,muscle pain,fatigue,nausea,fever",Remote Location 6
+P077,"headache,nausea,shortness of breath,fatigue,muscle pain",Remote Location 9
+P078,"shortness of breath,headache,cough,fatigue,nausea",Remote Location 2
+P079,"fever,shortness of breath,muscle pain,fatigue,cough,headache,nausea",Remote Location 4
+P080,"cough,fatigue,headache",Remote Location 8
+P081,"muscle pain,nausea,fever,headache,shortness of breath,cough,fatigue",Remote Location 8
+P082,cough,Remote Location 8
+P083,"cough,fatigue,muscle pain",Remote Location 4
+P084,"fatigue,nausea",Remote Location 1
+P085,"headache,fever,nausea,shortness of breath",Remote Location 10
+P086,"fever,cough",Remote Location 3
+P087,"cough,muscle pain,headache,fatigue,nausea",Remote Location 6
+P088,fatigue,Remote Location 6
+P089,"nausea,headache,cough,fever,fatigue,shortness of breath,muscle pain",Remote Location 7
+P090,headache,Remote Location 8
+P091,"cough,shortness of breath",Remote Location 9
+P092,"headache,shortness of breath,muscle pain,nausea,cough,fatigue",Remote Location 2
+P093,muscle pain,Remote Location 3
+P094,"nausea,fever",Remote Location 3
+P095,"fatigue,muscle pain",Remote Location 9
+P096,"fatigue,headache,muscle pain,fever,shortness of breath",Remote Location 1
+P097,muscle pain,Remote Location 1
+P098,"cough,fatigue,shortness of breath,fever",Remote Location 6
+P099,"headache,shortness of breath,muscle pain,nausea,cough,fatigue,fever",Remote Location 2
+P100,"nausea,headache,fever,shortness of breath,fatigue,muscle pain,cough",Remote Location 1
+P101,"muscle pain,nausea,shortness of breath,cough",Remote Location 1
+P102,"muscle pain,nausea,shortness of breath",Remote Location 5
+P103,"nausea,shortness of breath,fatigue,muscle pain",Remote Location 10
+P104,"fever,nausea",Remote Location 6
+P105,"headache,cough,fever,muscle pain,shortness of breath,nausea,fatigue",Remote Location 1
+P106,"fever,muscle pain,nausea",Remote Location 5
+P107,"nausea,muscle pain,fatigue,headache,shortness of breath,cough",Remote Location 7
+P108,"cough,fever,nausea,headache",Remote Location 10
+P109,"fatigue,fever,shortness of breath,headache,muscle pain,nausea,cough",Remote Location 1
+P110,"cough,shortness of breath",Remote Location 10
+P111,cough,Remote Location 4
+P112,"nausea,fatigue,headache",Remote Location 9
+P113,"muscle pain,headache,shortness of breath,fever,cough,nausea",Remote Location 7
+P114,"nausea,headache,muscle pain,shortness of breath",Remote Location 5
+P115,"nausea,fever,headache,shortness of breath",Remote Location 2
+P116,cough,Remote Location 4
+P117,"shortness of breath,cough,fever,fatigue",Remote Location 9
+P118,"shortness of breath,muscle pain,cough,nausea,fever",Remote Location 6
+P119,cough,Remote Location 7
+P120,"fatigue,muscle pain,shortness of breath,fever",Remote Location 9
+P121,"headache,muscle pain,shortness of breath,fatigue",Remote Location 4
+P122,muscle pain,Remote Location 6
+P123,shortness of breath,Remote Location 7
+P124,"nausea,fatigue,muscle pain,cough,headache,shortness of breath",Remote Location 10
+P125,"headache,muscle pain,nausea,cough,fatigue,fever,shortness of breath",Remote Location 6
+P126,"headache,shortness of breath,fatigue,cough,muscle pain,nausea",Remote Location 10
+P127,headache,Remote Location 7
+P128,"fatigue,headache,shortness of breath,muscle pain,nausea",Remote Location 10
+P129,"shortness of breath,muscle pain,fever",Remote Location 6
+P130,"fatigue,fever,muscle pain",Remote Location 10
+P131,"fatigue,fever,shortness of breath,cough,nausea,muscle pain",Remote Location 9
+P132,"cough,nausea",Remote Location 2
+P133,"fever,shortness of breath,nausea,muscle pain",Remote Location 9
+P134,"fever,cough",Remote Location 6
+P135,"shortness of breath,fatigue,muscle pain",Remote Location 1
+P136,"fatigue,muscle pain",Remote Location 4
+P137,headache,Remote Location 5
+P138,"shortness of breath,cough,fever,muscle pain,fatigue",Remote Location 10
+P139,"cough,fatigue,shortness of breath,fever,headache,nausea,muscle pain",Remote Location 6
+P140,"cough,headache,fatigue,fever,shortness of breath,nausea,muscle pain",Remote Location 6
+P141,"shortness of breath,fever,fatigue,muscle pain,headache,nausea",Remote Location 7
+P142,fatigue,Remote Location 3
+P143,"fatigue,muscle pain",Remote Location 4
+P144,"cough,headache",Remote Location 5
+P145,"muscle pain,shortness of breath,fatigue,headache,nausea,cough",Remote Location 6
+P146,"fever,fatigue,nausea",Remote Location 5
+P147,"fever,headache",Remote Location 5
+P148,"headache,muscle pain,nausea,shortness of breath",Remote Location 10
+P149,"fatigue,shortness of breath",Remote Location 10
+P150,"cough,shortness of breath,fatigue,fever,headache,muscle pain",Remote Location 2
+P151,"nausea,fatigue,cough,shortness of breath,fever",Remote Location 6
+P152,"fever,fatigue,nausea,headache,shortness of breath,muscle pain,cough",Remote Location 6
+P153,"fatigue,cough,shortness of breath,fever",Remote Location 8
+P154,"headache,muscle pain,nausea,fatigue,fever",Remote Location 10
+P155,"muscle pain,fever",Remote Location 9
+P156,nausea,Remote Location 3
+P157,fever,Remote Location 10
+P158,"shortness of breath,cough,headache,fatigue,muscle pain,fever",Remote Location 5
+P159,muscle pain,Remote Location 10
+P160,cough,Remote Location 2
+P161,"cough,fever,nausea",Remote Location 4
+P162,shortness of breath,Remote Location 4
+P163,shortness of breath,Remote Location 3
+P164,"fatigue,shortness of breath,fever,nausea",Remote Location 6
+P165,"shortness of breath,headache,nausea,fatigue,muscle pain",Remote Location 3
+P166,"nausea,fatigue,fever,cough",Remote Location 7
+P167,"muscle pain,fever,fatigue,nausea,cough",Remote Location 7
+P168,"muscle pain,headache,shortness of breath",Remote Location 9
+P169,"shortness of breath,fatigue",Remote Location 5
+P170,"cough,fever,fatigue,shortness of breath,muscle pain",Remote Location 2
+P171,"headache,fatigue,nausea,fever,cough",Remote Location 3
+P172,"muscle pain,cough",Remote Location 4
+P173,"nausea,muscle pain,headache,shortness of breath,cough,fatigue",Remote Location 10
+P174,"fever,muscle pain,cough,headache,fatigue",Remote Location 6
+P175,"shortness of breath,nausea,headache",Remote Location 5
+P176,"muscle pain,fatigue,cough,shortness of breath,nausea,fever",Remote Location 6
+P177,muscle pain,Remote Location 9
+P178,"fever,fatigue,cough,nausea,muscle pain,shortness of breath,headache",Remote Location 6
+P179,headache,Remote Location 1
+P180,"muscle pain,cough",Remote Location 3
+P181,"fever,muscle pain,shortness of breath,headache,fatigue,cough",Remote Location 10
+P182,"muscle pain,shortness of breath,nausea,fever,fatigue",Remote Location 5
+P183,"fatigue,cough,shortness of breath",Remote Location 9
+P184,"fatigue,muscle pain,cough,headache,fever",Remote Location 6
+P185,"headache,fatigue,shortness of breath,nausea",Remote Location 6
+P186,"nausea,headache,shortness of breath",Remote Location 1
+P187,"fever,cough,headache,fatigue",Remote Location 9
+P188,"cough,fatigue,headache,fever,muscle pain",Remote Location 6
+P189,"fever,headache",Remote Location 9
+P190,fatigue,Remote Location 4
+P191,shortness of breath,Remote Location 6
+P192,"shortness of breath,headache,cough",Remote Location 2
+P193,nausea,Remote Location 8
+P194,"headache,fatigue,fever,cough,nausea,shortness of breath,muscle pain",Remote Location 6
+P195,"muscle pain,cough,headache",Remote Location 4
+P196,"headache,cough,fatigue,muscle pain",Remote Location 10
+P197,"shortness of breath,nausea,fatigue,fever,muscle pain,headache",Remote Location 10
+P198,"fatigue,fever",Remote Location 6
+P199,"shortness of breath,fever",Remote Location 8
+P200,"cough,fatigue,shortness of breath,nausea,fever,headache",Remote Location 6
+P201,"headache,fever,cough,fatigue,muscle pain,shortness of breath",Remote Location 2
+P202,"cough,shortness of breath,fever",Remote Location 4
+P203,"shortness of breath,headache,fever,fatigue,muscle pain",Remote Location 9
+P204,"headache,nausea,shortness of breath,fever,fatigue,cough",Remote Location 2
+P205,shortness of breath,Remote Location 4
+P206,nausea,Remote Location 6
+P207,"fatigue,shortness of breath,headache,muscle pain,fever,nausea,cough",Remote Location 7
+P208,"shortness of breath,muscle pain,nausea,cough,fever",Remote Location 7
+P209,"nausea,muscle pain,fatigue",Remote Location 4
+P210,"muscle pain,headache,fever,shortness of breath",Remote Location 2
+P211,"headache,cough,fever,nausea,shortness of breath,fatigue,muscle pain",Remote Location 9
+P212,"fatigue,nausea,cough,fever,headache,shortness of breath",Remote Location 5
+P213,"muscle pain,fatigue,shortness of breath,nausea,cough,headache,fever",Remote Location 2
+P214,"shortness of breath,cough,fever,fatigue,headache",Remote Location 9
+P215,"fatigue,fever,muscle pain",Remote Location 8
+P216,"nausea,fatigue,fever,cough,shortness of breath,headache",Remote Location 2
+P217,"headache,fatigue,cough",Remote Location 3
+P218,"shortness of breath,headache,muscle pain,cough,fatigue",Remote Location 10
+P219,"fatigue,fever",Remote Location 6
+P220,fatigue,Remote Location 9
+P221,"nausea,muscle pain,shortness of breath,headache,fever",Remote Location 7
+P222,"nausea,shortness of breath",Remote Location 9
+P223,"fatigue,shortness of breath",Remote Location 5
+P224,"shortness of breath,cough,fatigue,fever,muscle pain,nausea",Remote Location 4
+P225,"muscle pain,fever,fatigue,nausea,shortness of breath,headache",Remote Location 10
+P226,"headache,nausea,muscle pain,cough,fever,shortness of breath,fatigue",Remote Location 5
+P227,"nausea,shortness of breath,fever,muscle pain,cough,fatigue,headache",Remote Location 7
+P228,"headache,fatigue,fever,muscle pain,nausea,cough,shortness of breath",Remote Location 2
+P229,"muscle pain,fatigue,cough,nausea,headache,fever",Remote Location 9
+P230,"cough,fever,shortness of breath,nausea",Remote Location 1
+P231,"fever,fatigue,muscle pain",Remote Location 6
+P232,"cough,headache,fatigue,fever,nausea,shortness of breath,muscle pain",Remote Location 7
+P233,"headache,fatigue,fever",Remote Location 9
+P234,"fatigue,nausea",Remote Location 8
+P235,"cough,shortness of breath,muscle pain,headache,fever,nausea,fatigue",Remote Location 9
+P236,"muscle pain,cough,headache",Remote Location 4
+P237,"cough,muscle pain,fever,nausea,shortness of breath,fatigue,headache",Remote Location 10
+P238,fever,Remote Location 6
+P239,"fever,fatigue,muscle pain,headache,shortness of breath",Remote Location 2
+P240,"shortness of breath,cough,headache,nausea,muscle pain,fever,fatigue",Remote Location 10
+P241,"fever,fatigue,muscle pain,cough",Remote Location 3
+P242,"headache,cough,shortness of breath,fatigue,muscle pain,fever,nausea",Remote Location 7
+P243,fatigue,Remote Location 10
+P244,"fever,nausea,cough",Remote Location 10
+P245,"cough,fatigue",Remote Location 4
+P246,"cough,fever,shortness of breath,nausea,muscle pain,headache,fatigue",Remote Location 7
+P247,"muscle pain,shortness of breath",Remote Location 6
+P248,"cough,headache,fever,nausea",Remote Location 3
+P249,"shortness of breath,headache,nausea,cough,muscle pain,fever",Remote Location 10
+P250,"headache,muscle pain,cough,fatigue,nausea,shortness of breath",Remote Location 7
+P251,"cough,shortness of breath,nausea,fatigue,fever",Remote Location 10
+P252,"muscle pain,fever",Remote Location 1
+P253,"nausea,shortness of breath,headache,fever",Remote Location 7
+P254,headache,Remote Location 9
+P255,"muscle pain,fatigue,headache",Remote Location 5
+P256,"muscle pain,shortness of breath,fatigue,cough,headache",Remote Location 3
+P257,"fatigue,nausea,headache",Remote Location 1
+P258,"fever,cough,headache,nausea,fatigue,shortness of breath",Remote Location 2
+P259,"fatigue,headache,nausea,shortness of breath,fever",Remote Location 3
+P260,fever,Remote Location 4
+P261,"headache,shortness of breath,fatigue,cough",Remote Location 10
+P262,"muscle pain,shortness of breath",Remote Location 7
+P263,"fatigue,cough,shortness of breath",Remote Location 6
+P264,"headache,muscle pain,fever,fatigue",Remote Location 5
+P265,"muscle pain,headache,shortness of breath,fever,nausea,fatigue,cough",Remote Location 9
+P266,"muscle pain,shortness of breath",Remote Location 5
+P267,nausea,Remote Location 2
+P268,"headache,cough,shortness of breath,muscle pain,fatigue,nausea",Remote Location 1
+P269,"muscle pain,shortness of breath,nausea,fatigue,cough,fever",Remote Location 6
+P270,"nausea,headache,shortness of breath,fatigue",Remote Location 3
+P271,"shortness of breath,fever,muscle pain,nausea,cough",Remote Location 2
+P272,"fever,headache,shortness of breath,fatigue,cough",Remote Location 8
+P273,"fever,headache,cough,fatigue,shortness of breath,nausea,muscle pain",Remote Location 9
+P274,headache,Remote Location 10
+P275,"headache,muscle pain,shortness of breath,fever",Remote Location 2
+P276,"fatigue,fever",Remote Location 8
+P277,"muscle pain,nausea,fatigue",Remote Location 8
+P278,"muscle pain,shortness of breath,nausea,fatigue,cough",Remote Location 1
+P279,fever,Remote Location 10
+P280,"fatigue,headache",Remote Location 2
+P281,"shortness of breath,nausea,fatigue",Remote Location 7
+P282,"muscle pain,fever,shortness of breath,fatigue,headache",Remote Location 5
+P283,"headache,fatigue,muscle pain,fever",Remote Location 8
+P284,"headache,cough,nausea,fever",Remote Location 3
+P285,"shortness of breath,fatigue,cough,headache,nausea",Remote Location 2
+P286,"cough,muscle pain,shortness of breath,fatigue,fever,nausea",Remote Location 8
+P287,"headache,shortness of breath,nausea,muscle pain,fever",Remote Location 7
+P288,headache,Remote Location 7
+P289,"fatigue,fever",Remote Location 2
+P290,"cough,shortness of breath,fever,nausea,headache",Remote Location 9
+P291,muscle pain,Remote Location 1
+P292,"fever,nausea,headache,fatigue,muscle pain,cough,shortness of breath",Remote Location 5
+P293,"cough,muscle pain,nausea",Remote Location 7
+P294,"muscle pain,headache,fever,shortness of breath,fatigue,nausea",Remote Location 5
+P295,fatigue,Remote Location 6
+P296,"headache,cough,muscle pain,fever",Remote Location 8
+P297,"shortness of breath,cough,fever,fatigue,nausea,headache",Remote Location 6
+P298,"headache,nausea,fatigue,shortness of breath",Remote Location 10
+P299,"muscle pain,nausea,cough",Remote Location 4
