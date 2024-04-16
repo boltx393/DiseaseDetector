@@ -1,5 +1,4 @@
 import csv
-import random
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import OneHotEncoder
@@ -31,6 +30,14 @@ class RemoteHealthAgent:
         Collect symptoms from a patient and store them in the symptom data dictionary.
         """
         self.symptom_data[patient_id] = {'symptoms': symptoms, 'location': location}
+
+    def append_to_csv(self, filename, patient_id, symptoms, location):
+        """
+        Append new patient data to the CSV file.
+        """
+        with open(filename, 'a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([patient_id, ','.join(symptoms), location])
 
     def gather_experience(self):
         """
@@ -153,11 +160,46 @@ if __name__ == "__main__":
     # Gather experience from the collected symptom data
     agent.gather_experience()
 
-    # Take user input for patient ID
-    patient_id = input("Enter patient ID (P001-P299): ")
+    print("Options:")
+    print("1. Add new patient")
+    print("2. Retrieve patient details")
 
-    # Analyze symptoms for the provided patient ID
-    result_patient = agent.analyze_symptoms(patient_id)
+    choice = input("Enter your choice (1/2): ")
 
-    # Display result for the patient
-    print(result_patient)
+    if choice == "1":
+        # Determine the next patient ID
+        next_patient_id = max((int(patient_id[1:]) for patient_id in agent.symptom_data.keys() if patient_id.startswith("P")), default=299) + 1
+        if next_patient_id < 300:
+            next_patient_id = 300
+        next_patient_id = f"P{next_patient_id:03d}"
+
+        # Take user input for new patient data
+        patient_id = next_patient_id
+        symptoms = input("Enter patient symptoms (comma-separated): ").split(',')
+        location = input("Enter remote location: ")
+
+        # Append new patient data to CSV file
+        agent.append_to_csv("patient_data.csv", patient_id, symptoms, location)
+
+        # Gather experience from the updated data
+        agent.gather_experience()
+
+        print("Patient data added successfully.")
+
+    elif choice == "2":
+        # Display the range of patient IDs
+        min_patient_id = min((int(patient_id[1:]) for patient_id in agent.symptom_data.keys() if patient_id.startswith("P")), default=300)
+        max_patient_id = max((int(patient_id[1:]) for patient_id in agent.symptom_data.keys() if patient_id.startswith("P")), default=299) + 1
+        print(f"Patient ID Range: P{min_patient_id:03d} - P{max_patient_id:03d}")
+
+        # Take user input for patient ID
+        patient_id = input("Enter patient ID: ")
+
+        # Analyze symptoms for the provided patient ID
+        result_patient = agent.analyze_symptoms(patient_id)
+
+        # Display result for the patient
+        print(result_patient)
+
+    else:
+        print("Invalid choice.")
