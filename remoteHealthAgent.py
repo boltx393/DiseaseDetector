@@ -171,15 +171,12 @@ class RemoteHealthAgent:
 
         # Calculate the probability of each disease based on observed symptoms
         disease_probability = {}
-        for disease, disease_symptoms in self.disease_graph.items():
-            # Calculate the probability of each symptom given the disease
-            symptom_prob_given_disease = 1.0
-            for symptom in symptoms:
-                if symptom in disease_symptoms:
-                    # Add Laplace smoothing to handle unseen symptoms
-                    symptom_prob_given_disease *= (symptom_counter[symptom] + 1) / (total_patients + len(symptom_counter))
-            # Calculate the probability of the disease given the symptoms
-            disease_probability[disease] = symptom_prob_given_disease
+        for symptom in symptoms:
+            if symptom in self.disease_graph:
+                for disease in self.disease_graph[symptom]:
+                    # Calculate the probability of each disease given the symptom
+                    disease_probability[disease] = (disease_probability.get(disease, 0) +
+                                                    (symptom_counter[symptom] + 1) / (total_patients + len(symptom_counter)))
 
         # Normalize probabilities
         total_probability = sum(disease_probability.values())
