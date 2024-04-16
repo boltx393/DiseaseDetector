@@ -156,7 +156,7 @@ class RemoteHealthAgent:
 
     def calculate_disease_probability(self, symptoms):
         """
-        Calculate the probability of each disease based on the observed symptoms.
+        Calculate the probabilities of all detected diseases based on the observed symptoms.
         """
         if not self.disease_graph:
             self.build_disease_graph()
@@ -183,6 +183,7 @@ class RemoteHealthAgent:
         for disease in disease_probability:
             disease_probability[disease] /= total_probability
 
+        # Return the probabilities of all detected diseases
         return disease_probability
 
 if __name__ == "__main__":
@@ -223,7 +224,7 @@ if __name__ == "__main__":
     elif choice == "2":
         # Display the range of patient IDs
         min_patient_id = min((int(patient_id[1:]) for patient_id in agent.symptom_data.keys() if patient_id.startswith("P")), default=300)
-        max_patient_id = max((int(patient_id[1:]) for patient_id in agent.symptom_data.keys() if patient_id.startswith("P")), default=299) + 1
+        max_patient_id = max((int(patient_id[1:]) for patient_id in agent.symptom_data.keys() if patient_id.startswith("P")), default=299)
         print(f"Patient ID Range: P{min_patient_id:03d} - P{max_patient_id:03d}")
 
         # Take user input for patient ID
