@@ -92,21 +92,23 @@ class RemoteHealthAgent:
         patient_symptoms = patient_data['symptoms']
         location = patient_data['location']
 
-        detected_diseases = self.detect_disease_with_ml(patient_symptoms)
+        detected_diseases, disease_probabilities = self.calculate_disease_probability(patient_symptoms)
 
         if detected_diseases:
-            most_likely_disease = detected_diseases[0]  # Assuming the first detected disease is the most likely
+            # Format detected diseases and their probabilities
+            detected_diseases_output = ", ".join([f"{disease} ({disease_probabilities[disease]:.2f})" for disease in detected_diseases])
+
+            # Determine the most likely disease based on highest probability
+            most_likely_disease = max(disease_probabilities, key=disease_probabilities.get)
             
             # Calculate disease severity based on the number of matching symptoms
             severity = self.calculate_severity(detected_diseases, patient_symptoms)
 
-            # Calculate disease probability based on observed symptoms
-            disease_probability = self.calculate_disease_probability(patient_symptoms)
-
-            return f"Location: {location}\nDetected diseases: {', '.join(detected_diseases)}.\nMost likely disease: {most_likely_disease}\nSymptoms: {', '.join(patient_symptoms)}\nSeverity: {severity}\nProbability: {disease_probability}"
+            return f"Location: {location}\nDetected diseases: {detected_diseases_output}.\nMost likely disease: {most_likely_disease}\nSymptoms: {', '.join(patient_symptoms)}\nSeverity: {severity}"
         else:
             return f"Location: {location}\nNo specific disease detected."
-        
+
+
     def calculate_severity(self, detected_diseases, patient_symptoms):
         """
         Calculate the severity of the disease based on the number of matching symptoms.
@@ -147,7 +149,7 @@ class RemoteHealthAgent:
         # Detect diseases based on a probability threshold
         detected_diseases = []
         for prob, disease in zip(predicted_disease_prob, self.disease_graph.values()):
-            if np.any(prob > 0.5):  # Considering a probability threshold for disease detection
+            if np.any(prob > 0.3):  # Considering a probability threshold for disease detection
                 detected_diseases.extend(disease)
 
         detected_diseases = list(set(detected_diseases))  # Remove duplicates
@@ -171,20 +173,21 @@ class RemoteHealthAgent:
 
         # Calculate the probability of each disease based on observed symptoms
         disease_probability = {}
+        detected_diseases = set()
         for symptom in symptoms:
             if symptom in self.disease_graph:
                 for disease in self.disease_graph[symptom]:
+                    detected_diseases.add(disease)
                     # Calculate the probability of each disease given the symptom
-                    disease_probability[disease] = (disease_probability.get(disease, 0) +
-                                                    (symptom_counter[symptom] + 1) / (total_patients + len(symptom_counter)))
+                    disease_probability[disease] = (disease_probability.get(disease, 0) + (symptom_counter[symptom] + 1) / (total_patients + len(symptom_counter)))
 
         # Normalize probabilities
         total_probability = sum(disease_probability.values())
         for disease in disease_probability:
             disease_probability[disease] /= total_probability
 
-        # Return the probabilities of all detected diseases
-        return disease_probability
+        # Return the detected diseases and their probabilities
+        return list(detected_diseases), disease_probability
 
 if __name__ == "__main__":
     agent = RemoteHealthAgent()
