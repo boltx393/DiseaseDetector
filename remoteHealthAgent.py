@@ -2,6 +2,7 @@ import csv
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import OneHotEncoder
+from collections import Counter
 
 class RemoteHealthAgent:
     def __init__(self):
@@ -91,7 +92,7 @@ class RemoteHealthAgent:
         patient_symptoms = patient_data['symptoms']
         location = patient_data['location']
 
-        detected_diseases, probability = self.detect_disease_with_ml(patient_symptoms)
+        detected_diseases = self.detect_disease_with_ml(patient_symptoms)
 
         if detected_diseases:
             most_likely_disease = detected_diseases[0]  # Assuming the first detected disease is the most likely
@@ -99,7 +100,10 @@ class RemoteHealthAgent:
             # Calculate disease severity based on the number of matching symptoms
             severity = self.calculate_severity(detected_diseases, patient_symptoms)
 
-            return f"Location: {location}\nDetected diseases: {', '.join(detected_diseases)}.\nMost likely disease: {most_likely_disease}.\nProbability: {probability:.2f}\nSymptoms: {', '.join(patient_symptoms)}\nSeverity: {severity}"
+            # Calculate disease probability based on observed symptoms
+            disease_probability = self.calculate_disease_probability(patient_symptoms)
+
+            return f"Location: {location}\nDetected diseases: {', '.join(detected_diseases)}.\nMost likely disease: {most_likely_disease}\nSymptoms: {', '.join(patient_symptoms)}\nSeverity: {severity}\nProbability: {disease_probability}"
         else:
             return f"Location: {location}\nNo specific disease detected."
         
@@ -139,7 +143,6 @@ class RemoteHealthAgent:
 
         # Make predictions using the trained model
         predicted_disease_prob = model.predict_proba([input_features])[0]  # Assuming only one disease is predicted
-        max_probability = np.max(predicted_disease_prob)
 
         # Detect diseases based on a probability threshold
         detected_diseases = []
@@ -149,7 +152,41 @@ class RemoteHealthAgent:
 
         detected_diseases = list(set(detected_diseases))  # Remove duplicates
 
-        return detected_diseases, max_probability
+        return detected_diseases
+
+    def calculate_disease_probability(self, symptoms):
+        """
+        Calculate the probability of each disease based on the observed symptoms.
+        """
+        if not self.disease_graph:
+            self.build_disease_graph()
+
+        # Count occurrences of each symptom in the historical data
+        symptom_counter = Counter()
+        for data in self.symptom_data.values():
+            symptom_counter.update(data['symptoms'])
+
+        # Calculate the total number of patients
+        total_patients = len(self.symptom_data)
+
+        # Calculate the probability of each disease based on observed symptoms
+        disease_probability = {}
+        for disease, disease_symptoms in self.disease_graph.items():
+            # Calculate the probability of each symptom given the disease
+            symptom_prob_given_disease = 1.0
+            for symptom in symptoms:
+                if symptom in disease_symptoms:
+                    # Add Laplace smoothing to handle unseen symptoms
+                    symptom_prob_given_disease *= (symptom_counter[symptom] + 1) / (total_patients + len(symptom_counter))
+            # Calculate the probability of the disease given the symptoms
+            disease_probability[disease] = symptom_prob_given_disease
+
+        # Normalize probabilities
+        total_probability = sum(disease_probability.values())
+        for disease in disease_probability:
+            disease_probability[disease] /= total_probability
+
+        return disease_probability
 
 if __name__ == "__main__":
     agent = RemoteHealthAgent()
